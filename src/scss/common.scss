@@ -1,0 +1,125 @@
+.block-head {
+
+	&__title {
+		display: flex;
+		column-gap: 16px;
+		margin-bottom: 33px;
+		@include adaptiveValue("margin-bottom", 33, 20, $maxWidth, $minWidth, 1);
+		align-items: start;
+	}
+
+	&__image {
+		flex: 0 0 17px;
+	}
+
+	&__icon {
+		width: 100%;
+	}
+
+	&__name {
+		font-weight: 700;
+		font-size: 12px;
+		line-height: 1.41;
+		letter-spacing: 2.5px;
+		text-transform: uppercase;
+	}
+
+	&__subtitle {
+		font-weight: 900;
+		font-size: 36px;
+		@include adaptiveValue("font-size", 36, 25, $maxWidth, $minWidth, 1);
+		line-height: 1.16;
+		color: $dark;
+		max-width: 583px;
+	}
+}
+
+.cards {
+	display: flex;
+	flex-wrap: wrap;
+	gap: 10px;
+
+	@media (min-width: 510px){
+		gap: 16px;
+	}
+	@media (min-width: 870px){
+		gap: 24px;
+	}
+}
+
+.card {
+	flex: 0 1 100%;
+
+	@media (min-width: 520px){
+		flex: 0 0 calc(50% - 8px);
+	}
+	@media (min-width: 870px){
+		flex: 0 0 calc(33.33% - 16px);
+	}
+
+	&__body {
+		display: flex;
+		gap: 15px;
+		height: 100%;
+
+		&_white-center {
+			flex-direction: column;
+			background-color: $white;
+			text-align: center;
+			padding: 50px 43px;
+			@include adaptiveValue("padding-top", 50, 15, $maxWidth, 870, 1);
+			@include adaptiveValue("padding-right", 43, 15, $maxWidth, 870, 1);
+			@include adaptiveValue("padding-left", 43, 15, $maxWidth, 870, 1);
+			@include adaptiveValue("padding-bottom", 50, 15, $maxWidth, 870, 1);
+			cursor: pointer;
+			transition: box-shadow 0.5s ease;
+			@media (any-hover: hover){
+				&:hover{
+					box-shadow: 0 8px 16px rgba(38, 38, 38, 0.25), 0 8px 16px rgba(38, 38, 38, 0.2);
+				}
+			}
+			@media (max-width: 870px){
+				@include adaptiveValue("padding", 50, 10, 870, 520, 1);
+			}
+			@media (max-width: 520px){
+				@include adaptiveValue("padding", 50, 10, 520, $minWidth, 1);
+			}
+		}
+
+		@media (min-width: 520px) and (max-width: 650px){
+			flex-direction: column;
+		}
+	}
+
+	&__img {
+		flex-grow: 0;
+		flex-shrink: 0;
+		@include adaptiveValue("flex-basis", 63, 40, $maxWidth, 520, 1);
+		align-self: start;
+		@media (min-width: 520px) and (max-width: 650px){
+			align-self: center;
+		}
+	}
+
+	&__icon {
+		width: 100%;
+	}
+
+	&__content {
+		@media (min-width: 870px){
+			padding: 4px 3px 0 0;
+		}
+	}
+
+	&__title {
+		font-weight: 900;
+		font-size: 19px;
+		line-height: 26px;
+		color: $dark;
+		@include adaptiveValue("margin-bottom", 20, 10, $maxWidth, $minWidth, 1);
+	}
+
+	&__text {
+	}
+}
+

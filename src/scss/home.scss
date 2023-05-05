@@ -1,0 +1,164 @@
+.who-we-are {
+
+	&__container {
+		padding: 0;
+	}
+
+	&__content {
+		padding: 100px 87px 300px;
+		@include adaptiveValue("padding-top", 100, 20, $maxWidth, $minWidth, 1);
+		@include adaptiveValue("padding-right", 87, 10, $maxWidth, $minWidth, 1);
+		@include adaptiveValue("padding-left", 87, 10, $maxWidth, $minWidth, 1);	
+		background: $white;
+		margin: 0 0 230px;
+		// margin: -80px 0 230px;
+		@media (min-width: $tablet){
+			background: url(../img/background/gears.png) right top no-repeat, $white;
+		}
+		@media (max-width: $tablet){
+			@include adaptiveValue("padding-bottom", 68, 20, 991.98	, $minWidth, 1);
+			@include adaptiveValue("margin-bottom", 100, 40, 991.98, $minWidth, 1);	
+		}
+	}
+
+	&__header {
+		@include adaptiveValue("margin-bottom", 36, 20, $maxWidth, $minWidth, 1);
+	}
+
+	&__text {
+		@include adaptiveValue("margin-bottom", 54, 30, $maxWidth, $minWidth, 1);
+	}
+
+	&__image {
+		position: relative;
+		width: 100%;
+		@media (min-width: $tablet){
+			margin: 0;
+		}
+	}
+
+	&__img {
+		width: 100%;
+		position: relative;
+		top: 0;
+		left: 0;
+		@media (min-width: $tablet){
+			position: absolute;
+			margin: 0;
+		}
+	}
+}
+
+.promise {
+
+	&__container {
+	}
+
+	&__content {
+		@include adaptiveValue("margin-bottom", 122, 40, $maxWidth, $minWidth, 1);
+	}
+
+	&__header {
+		@include adaptiveValue("margin-bottom", 68, 35, $maxWidth, $minWidth, 1);
+	}
+
+	&__items {
+	}
+}
+
+.services {
+
+	&__background {
+		@include adaptiveValue("padding-top", 110, 20, $maxWidth, $minWidth, 1);
+		@include adaptiveValue("padding-bottom", 110, 50, $maxWidth, $minWidth, 1);
+		@media (min-width: $tablet){
+			background: url(../img/services/gears-left-top.png) no-repeat left top,
+							url(../img/services/gears-right-bottom.png) no-repeat right bottom;
+		}
+	}
+
+	&__container {
+	}
+
+	&__content {
+	}
+
+	&__header {
+		@include adaptiveValue("margin-bottom", 78, 35, $maxWidth, $minWidth, 1);
+	}
+
+	&__items {
+		@include adaptiveValue("margin-bottom", 66, 30, $maxWidth, $minWidth, 1);
+	}
+
+	&__button {
+		display: flex;
+		justify-content: center;
+	}
+}
+
+.appointment {
+
+	&__background {
+		background: $dark;	
+			@media (min-width: $tablet){
+				background: 
+					url(../img/appointment/gears.png) no-repeat top right , 
+					url(../img/appointment/gears_inverted.png) no-repeat left bottom 
+					$dark;
+			}
+	}
+
+	&__container {
+	}
+
+	&__content {
+	}
+
+	&__form {
+	}
+
+	&__statistics {
+	}
+}
+
+.form-appointment {
+
+	&__title {
+	}
+
+	&__body {
+
+	}
+}
+
+.form {
+
+	&__input {
+	}
+
+	&__textarea {
+	}
+
+	&__button {
+		display: flex;
+		justify-content: flex-end;
+	}
+}
+
+.customers {
+
+	&__title {
+	}
+
+	&__count {
+	}
+
+	&__subtitle {
+	}
+}
+
+
+
+
+
